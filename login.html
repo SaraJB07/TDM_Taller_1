@@ -16,7 +16,7 @@
     <!-- Favicon --> 
     <link rel="icon" type="image/svg" href="./logos/favicon.svg"> 
     
-    <title>Correo</title> 
+    <title>Inicio</title> 
 
 </head>
 <body>
@@ -25,20 +25,24 @@
 
     <div class="form-container">
         <img src="./logos/logo.svg" alt="logo" class="logo">
-        <h1 class="title">Email has been sent!</h1>
-
-        <p class="subtitle">Plase check your inbox for instructions on how to reset the password</p>
-
-        <div class="image"> 
-            <img src="icons/email.svg"> 
-        </div>
-
         <form action="/" class="form">
+  
+        <label for="email" class="label">Email address</label>
+        <input type="email" id="email" placeholder="email@uniboyaca.edu.co" class="input input-password">
+
+
+        <label for="password" class="label">Password</label>
+        <input type="password" id="password" placeholder="*********" class="input input-password">
+
+       
         <input type="submit" value="Login" class="primary-button login-button">
-        <p class="subtitle">Didn't receive the email? <span class="Vinculo"> Resend</span></p>
+        
 
         </form>
-
+        <a href="" class="subtitle"><span class="Vinculo"> Forgot my password</span></a>
+        <form action="/" class="form">
+            <input type="submit" value="Sign Up" class= "Second-button login-button">
+        </form>
     </div>
 </div>
 
