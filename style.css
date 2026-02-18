@@ -7,6 +7,7 @@
 --sm: 14px;
 --md: 16px;
 --lg: 18px;
+--card-size: 200px;
 }
 
 body {
@@ -123,6 +124,145 @@ margin-bottom: 30px;
     font-weight: bold;
     height: 50px;
 }
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card-size));
+    gap: 26px;
+    place-content: center;
+    margin: 10px;
+}
+
+.product-card {
+    width: var(--card-size);
+}
+
+.product-card img {
+    width: var(--card-size);
+    height: var(--card-size);
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.product-info figure {
+    margin: 0;
+}
+
+.product-info figure img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Es para dar las declaraciones en el orden de p (1) */
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+/* Es para dar las declaraciones en el orden de p (2) */
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+}
+
+/* Declaraciones para el cuadro alineado a la izquierda */
+.Box-list{
+    list-style: none;
+    margin: 3px;
+    padding: 15px;
+    width: 100px;
+    background-color: var( --white);
+    border: 2px solid #C7C7C7;
+    border-radius: 10px;
+    text-align: right;
+}
+
+/* espacio entre los elementos de la lista */
+.Box-list li{
+    padding: 12px 0;
+    
+}
+
+/* Declaraciones para los enlaces dentro de la lista  */
+.Box-list a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* Agregar borde inferior al segundo elemento de la lista */
+.Box-list li:nth-child(2) {
+    border-bottom: 1px solid #C7C7C7;
+}
+
+/* Poner los elementos de la lista en negrita excepto el último elemento */
+.Box-list li:not(:last-child) a{
+    font-weight: bold;
+}
+
+/* Tamaño de fuente del último elemento de la lista */
+.Box-list li:last-child a{
+    font-size: var( --sm);
+}
+
+
+/* Declaraciones para el tamaño del contenedor */
+.Box{
+    width: 100%;
+    padding: 20px; 
+}
+
+/* Declaraciones para los enlaces dentro de la lista  */
+.Box ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+/* espacio entre los elementos de la lista */
+.Box li{
+    padding: 10px 0;
+    
+}
+
+/* Declaraciones para los enlaces de las listas */
+.Box a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+/* Agregar borde inferior */
+.Box ul:nth-child(1) {
+    border-bottom: 1px solid #C7C7C7;
+}
+
+
+/* modifica el color del email y que no este en negrita */
+.email a{
+    font-weight: normal;
+    color: #C7C7C7;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 640px){
     .logo{
         display: block;
@@ -132,5 +272,11 @@ margin-bottom: 30px;
 @media (max-width: 640px){
     .form-container{
         width: 90%;
+    }
+}
+
+@media (max-width: 640px){
+    .root {
+        --card-size: 140px;
     }
 }
